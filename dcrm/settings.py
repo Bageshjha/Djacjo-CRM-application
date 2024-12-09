@@ -1,3 +1,8 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+PASSWORD = os.getenv('PASSWORD')
 """
 Django settings for dcrm project.
 
@@ -79,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'CRM',
         'USER' : 'root',
-        'PASSWORD': 'Mysql@07',
+        'PASSWORD': PASSWORD,
         'HOST':'localhost',
         'PORT':'3306'
     }
